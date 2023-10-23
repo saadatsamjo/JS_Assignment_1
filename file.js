@@ -15,7 +15,7 @@ const queries = [
 
 
 
-// appending the rows to rows span
+// appending the rows to rows body
 const numberOfQueries = queries.length;
 let i = 0;
 const rowsBody = document.getElementById("rows-body");
@@ -24,20 +24,48 @@ while (i < numberOfQueries) {
     const query = queries[i];
 
     const row = document.createElement("tr");
-row.innerHTML = `
+    
+    row.innerHTML = 
+    `
     <td id="student-data-id-${query.id}" class="td student-id">${query.id}</td>
     <td id="student-data-name-${query.id}" class="td">${query.student}</td>
     <td id="student-data-query-${query.id}" class="td">${query.query}</td>
     <td id="student-data-status-${query.id}" class="td">${query.status}</td>
-    
+
     <td id="student-data-status-${query.id}" class="td">
         <button class="approve-button"> <a href="">Approve</a></button>
         <button class="decline-button"> <a href="">Decline</a> </button>
     </td>
-
-`;
-rowsBody.appendChild(row);
-
-    
+    `;
+    rowsBody.appendChild(row);
     i = i + 1;
 }
+
+
+// ----------------------------------USING DO WHILE LOOP---------------------------------------//
+
+// ------appending the rows to rows body-------//
+
+// const numberOfQueries = queries.length;
+// let i = 0;
+// const rowsBody = document.getElementById("rows-body");
+
+// do {
+//     const query = queries[i];
+
+//     const row = document.createElement("tr");
+//     row.innerHTML = `
+//         <td id="student-data-id-${query.id}" class="td student-id">${query.id}</td>
+//         <td id="student-data-name-${query.id}" class="td">${query.student}</td>
+//         <td id="student-data-query-${query.id}" class="td">${query.query}</td>
+//         <td id="student-data-status-${query.id}" class="td">${query.status}</td>
+        
+//         <td id="student-data-status-${query.id}" class="td">
+//             <button class="approve-button"> <a href="">Approve</a></button>
+//             <button class="decline-button"> <a href="">Decline</a> </button>
+//         </td>
+//     `;
+//     rowsBody.appendChild(row);
+
+//     i = i + 1;
+// } while (i < numberOfQueries);
